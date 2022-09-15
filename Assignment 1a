@@ -1,0 +1,30 @@
+import java.util.*;
+	 class Main {
+		  public static void main(String[] args) {
+	
+		   Scanner sc = new Scanner(System.in);
+           
+			boolean continueSum = true;
+
+			System.out.print("Enter two numbers to add: ");
+			do {
+				
+				try {
+					int num1 = sc.nextInt();
+					int num2 = sc.nextInt();
+
+					System.out.println("The sum is " + (num1 + num2));
+					continueSum = false;
+				}
+				
+				catch (InputMismatchException exception) {
+					System.out.println("Try again. (" + "Input error. Please enter two integers) ");
+						sc.nextLine();
+				}
+			} 
+			while (continueSum);
+            sc.close();
+		  }
+	  }
+  
+   
